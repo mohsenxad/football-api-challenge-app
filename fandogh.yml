@@ -1,0 +1,11 @@
+kind: ExternalService
+name: football-api-challenge-app
+spec:
+  image_pull_policy: Always
+  port: 5002
+  source:
+    context: .
+    node_version: '16'
+    project_type: nodejs
+  resources:
+      memory: 100Mi
