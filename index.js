@@ -2,6 +2,11 @@ const express = require('express');
 var bodyParser = require('body-parser')
 require('dotenv').config();
 
+const auth = require('football-middleware-authentication-app')(
+    process.env.ACCESS_TOKEN_SECRET,
+    process.env.REFRESH_TOKEN_SECRET
+)
+
 const packageJson = require('./package.json');
 
 var app = express();
@@ -30,6 +35,7 @@ app.get('/isAlive',
 );
 
 app.get('/challenge/getAllByEvent',
+    auth.chechAuth,
     async (req, res) =>
         {
             const eventId = req.headers.eventid;
