@@ -1,0 +1,3 @@
+GET https://football-api-challenge-app-mohsenxad.fandogh.cloud/challenge/getAllByEvent
+eventid: 635d2fd1911e0aa78488d4c0
+token: eyJhbGciOiJIUzI1NiJ9.NjM2MTFmYmI5MTFlMGFhNzg0NzIzZTQ5.WM_WafMPlpJQFCTX0eG-4nFEDKzb0SEXF7T0Mf1BtZs
